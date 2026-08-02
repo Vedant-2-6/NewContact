@@ -1,308 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Vedant Patel</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
-
-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-background:
-radial-gradient(circle at top left,#ffffff,#f4f4f5 35%,#ececec 100%);
-
-overflow:hidden;
-
-}
-
-/* floating blobs */
-
-body::before,
-body::after{
-
-content:"";
-position:absolute;
-border-radius:50%;
-filter:blur(80px);
-opacity:.5;
-z-index:-1;
-
-}
-
-body::before{
-
-width:280px;
-height:280px;
-
-background:#dbeafe;
-
-top:-80px;
-left:-80px;
-
-}
-
-body::after{
-
-width:320px;
-height:320px;
-
-background:#ede9fe;
-
-bottom:-100px;
-right:-100px;
-
-}
-
-.card{
-
-width:380px;
-max-width:92%;
-
-padding:35px;
-
-border-radius:32px;
-
-background:rgba(255,255,255,.55);
-
-backdrop-filter:blur(30px);
--webkit-backdrop-filter:blur(30px);
-
-border:1px solid rgba(255,255,255,.8);
-
-box-shadow:
-0 10px 40px rgba(0,0,0,.08),
-inset 0 1px 1px rgba(255,255,255,.7);
-
-text-align:center;
-
-}
-
-.avatar{
-
-width:88px;
-height:88px;
-
-margin:auto;
-
-border-radius:50%;
-
-background:white;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:40px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-margin-bottom:20px;
-
-}
-
-h1{
-
-font-size:30px;
-font-weight:700;
-
-color:#111827;
-
-}
-
-.subtitle{
-
-margin-top:10px;
-
-font-size:16px;
-
-color:#6b7280;
-
-line-height:1.5;
-
-}
-
-.number{
-
-margin-top:16px;
-
-font-size:24px;
-font-weight:600;
-
-color:#2563eb;
-
-}
-
-.button{
-
-display:block;
-
-margin-top:18px;
-
-padding:17px;
-
-border-radius:18px;
-
-font-size:17px;
-font-weight:600;
-
-text-decoration:none;
-
-transition:.25s;
-
-}
-
-.save{
-
-background:#007AFF;
-color:white;
-
-}
-
-.save:hover{
-
-transform:translateY(-2px);
-box-shadow:0 10px 20px rgba(0,122,255,.25);
-
-}
-
-.call{
-
-background:white;
-color:#111;
-
-border:1px solid rgba(0,0,0,.08);
-
-}
-
-.call:hover{
-
-background:#f8f8f8;
-
-}
-
-.whatsapp{
-
-background:#25D366;
-color:white;
-
-}
-
-.whatsapp:hover{
-
-transform:translateY(-2px);
-
-}
-
-.qr{
-
-margin-top:28px;
-
-}
-
-.qr img{
-
-width:165px;
-
-border-radius:18px;
-
-padding:12px;
-
-background:white;
-
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.footer{
-
-margin-top:18px;
-
-font-size:14px;
-
-color:#9ca3af;
-
-}
-
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;background:linear-gradient(180deg,#fff,#f4f4f7);display:flex;justify-content:center;align-items:center;min-height:100svh;padding:20px}
+.card{width:min(390px,100%);background:rgba(255,255,255,.75);backdrop-filter:blur(30px);border-radius:34px;padding:24px;border:1px solid rgba(255,255,255,.9);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.photo{width:112px;height:112px;border-radius:50%;display:block;margin:0 auto 18px;object-fit:cover;border:4px solid #fff;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+h1{text-align:center;font-size:31px;color:#111}
+.msg{text-align:center;color:#6e6e73;line-height:1.6;margin-top:10px}
+.msg strong{color:#111}
+.num{text-align:center;font-size:24px;font-weight:700;color:#007AFF;margin:20px 0 24px}
+.save{display:flex;justify-content:center;align-items:center;gap:10px;height:58px;background:#007AFF;color:#fff;text-decoration:none;border-radius:18px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.tile{text-decoration:none;background:#fff;border-radius:20px;padding:18px;text-align:center;color:#111;border:1px solid rgba(0,0,0,.05)}
+.tile i{font-size:26px;margin-bottom:10px}
+.wa i{color:#25D366}.call i{color:#007AFF}
+.label{font-weight:700}.sub{font-size:13px;color:#6e6e73;margin-top:4px}
 </style>
-
 </head>
-
 <body>
-
 <div class="card">
-
-<div class="avatar">
-
-👤
-
-</div>
-
+<img src="Vedant.jpeg" class="photo" alt="Vedant Patel">
 <h1>Vedant Patel</h1>
-
-<p class="subtitle">
-
-I've changed my phone number.<br>
-
+<div class="msg">
+Below is my new phone number.<br>
+<strong>My old number will soon be out of service.</strong><br>
 Please save my new contact.
-
-</p>
-
-<div class="number">
-
-+91 63591 73565
-
 </div>
-
-<a class="button save" href="Vedant_Patel_Contact.vcf">
-
-📇 Save / Update Contact
-
-</a>
-
-<a class="button call" href="tel:+916359173565">
-
-📞 Call
-
-</a>
-
-<a class="button whatsapp" href="https://wa.me/916359173565">
-
-💬 WhatsApp
-
-</a>
-
-<div class="qr">
-
-<img src="qr.png">
-
+<div class="num">+91 63591 73565</div>
+<a class="save" href="Vedant_Patel_Contact.vcf"><i class="fa-solid fa-address-card"></i>Save Contact</a>
+<div class="grid">
+<a class="tile wa" href="https://wa.me/916359173565"><i class="fa-brands fa-whatsapp"></i><div class="label">WhatsApp</div><div class="sub">Message me</div></a>
+<a class="tile call" href="tel:+916359173565"><i class="fa-solid fa-phone"></i><div class="label">Call</div><div class="sub">Phone</div></a>
 </div>
-
-<div class="footer">
-
-Made with ❤️ by Vedant Patel
-
 </div>
-
-</div>
-
 </body>
 </html>
